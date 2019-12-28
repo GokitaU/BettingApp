@@ -47,6 +47,16 @@ namespace BettingApp
             return lastName;
         }
 
+        public static string RND_Adress(Random random)
+        {
+            // Random generation for Names Arrays
+            string[] addressArray = { "Patra", "Sparti", "Kalamata", "Athina", "Thessaloniki", "Kavala", "Thoiva", "Lamia", "Katerini", "Platamwnas" };
+
+            string address = addressArray[random.Next(0, addressArray.Length)];
+
+            return address;
+        }
+
         public static string RND_Subjects(Random random)
         {
             // Random generation for Names Arrays
@@ -86,5 +96,40 @@ namespace BettingApp
 
             return ID;
         }
+
+        public static string RND_CardNumber(Random random)
+        {
+            string[] randmonNumbers = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+            List<string> randomNumbersAdded = new List<string>();
+            string fullCardNumber = "";
+
+            for (int i = 0; i < 16; i++)
+            {
+                string cardNumber = randmonNumbers[random.Next(0, randmonNumbers.Length)];
+                randomNumbersAdded.Add(cardNumber);
+            }
+                        
+            fullCardNumber = randomNumbersAdded[0] + randomNumbersAdded[1] + randomNumbersAdded[2] + randomNumbersAdded[3] + " " + randomNumbersAdded[4] + randomNumbersAdded[5] + randomNumbersAdded[6] + randomNumbersAdded[7] + " " + randomNumbersAdded[8] + randomNumbersAdded[9] + randomNumbersAdded[10] + randomNumbersAdded[11] + " " + randomNumbersAdded[12] + randomNumbersAdded[13] + randomNumbersAdded[14] + randomNumbersAdded[15];
+            
+            return fullCardNumber;
+        }
+
+        public static string RND_PhoneNumber(Random random)
+        {
+            string[] randmonNumbers = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" };
+            List<string> randomNumbersAdded = new List<string>();
+            string fullPhoneNumber = "";
+
+            for (int i = 0; i < 10; i++)
+            {
+                string phoneNumber = randmonNumbers[random.Next(0, randmonNumbers.Length)];
+                randomNumbersAdded.Add(phoneNumber);
+            }
+
+            fullPhoneNumber = "69" + randomNumbersAdded[0] + randomNumbersAdded[1] + randomNumbersAdded[2] + randomNumbersAdded[3] + randomNumbersAdded[4] + randomNumbersAdded[5] + randomNumbersAdded[6] + randomNumbersAdded[7];
+
+            return fullPhoneNumber;
+        }
+
     }
 }

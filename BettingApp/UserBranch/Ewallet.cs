@@ -7,17 +7,23 @@ using System.Threading.Tasks;
 namespace BettingApp
 {
     class Ewallet
-    {       
+    {
         //public int ID { get; set; }
-        public double Balance { get; set; }
-        public List<CreditCard> CreditCards { get; set; }
-        public User Owner { get; set; }
+        private double Balance { get; set; }
+        private List<CreditCard> CreditCards { get; set; }
+        private User Owner { get; set; }
 
         public Ewallet(User owner)
-        {
+        {            
             Balance = 0;
             CreditCards = new List<CreditCard>();
             Owner = owner;
         }
+
+        // Here all the method will go. User will create a E Wallet basically,
+        // 1st) Connecting Credit Card to Ewaller
+        // 2nd) Deposit Money from Credit card to E Wallet mayne another method or in the same one for WithDrawall
+        // WILL SEE, DONT KNOW WHERE TO PUT IT YET
+        
     }
 }

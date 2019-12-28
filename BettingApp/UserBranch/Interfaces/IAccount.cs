@@ -8,7 +8,7 @@ namespace BettingApp
 {
     interface IAccount
     {
-        string UserName { get; set; }
-        string Password { get; set; }
+        string UserName { get; }
+        string Password { get; }        
     }
 }
