@@ -26,7 +26,6 @@ namespace BettingApp
                 default:
                     Active = counter == 1;
                     Console.WriteLine("There is no such option. The programm will Terminate");
-                    Console.WriteLine("No Wait.......I....L.....");
                     return Active;
             }
 
