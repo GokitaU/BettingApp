@@ -7,7 +7,13 @@ using System.Threading.Tasks;
 namespace BettingApp
 {
     class CreditCard
-    {
+    {       
+        //public int ID { get; set; }
+        public string CardNumber { get; set; }
+        public string NameOnCard { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public User Owner { get; set; }
+
         public CreditCard(string cardNumber, string nameOnCard, DateTime expirationDate, User owner)
         {
             CardNumber = cardNumber;
@@ -15,11 +21,5 @@ namespace BettingApp
             ExpirationDate = expirationDate;
             Owner = owner;
         }
-
-        //public int ID { get; set; }
-        public string CardNumber { get; set; }
-        public string NameOnCard { get; set; }
-        public DateTime ExpirationDate { get; set; }
-        public User Owner { get; set; }
     }
 }

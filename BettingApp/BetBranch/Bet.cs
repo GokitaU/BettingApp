@@ -13,7 +13,7 @@ namespace BettingApp
             Outcome = outcome;
             MoneyAmount = moneyAmount;
         }
-
+        
         //public int ID { get; set; }
         public Outcome Outcome { get; set; }
         public double  MoneyAmount { get; set; }

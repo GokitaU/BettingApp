@@ -43,18 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="Bet.cs" />
-    <Compile Include="CreditCard.cs" />
-    <Compile Include="DBContext.cs" />
-    <Compile Include="Ewallet.cs" />
-    <Compile Include="FootballMatch.cs" />
-    <Compile Include="FootballTeam.cs" />
-    <Compile Include="IAccount.cs" />
+    <Compile Include="Admin\Admin.cs" />
+    <Compile Include="BetBranch\Bet.cs" />
+    <Compile Include="UserBranch\Interfaces\ICreditCard.cs" />
+    <Compile Include="SupportClasses\CustomException.cs" />
+    <Compile Include="SupportClasses\Repeater.cs" />
+    <Compile Include="SupportClasses\RandomGenerator.cs" />
+    <Compile Include="UserBranch\CreditCard.cs" />
+    <Compile Include="SupportClasses\DBContext.cs" />
+    <Compile Include="UserBranch\Ewallet.cs" />
+    <Compile Include="GamesBranch\FootballMatch.cs" />
+    <Compile Include="GamesBranch\FootballTeam.cs" />
+    <Compile Include="UserBranch\Interfaces\IAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="UserInterface.cs" />
+    <Compile Include="UserBranch\User.cs" />
+    <Compile Include="SupportClasses\UserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
