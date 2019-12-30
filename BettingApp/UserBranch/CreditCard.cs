@@ -71,7 +71,6 @@ namespace BettingApp
                 creditCard.CreditCard_Balance = creditCard.CreditCard_Balance;
                 Console.WriteLine("Something was wrong with the Card Transaction");
             }
-
         }
 
         // String Override to Print the Credit Card Details

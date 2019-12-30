@@ -13,7 +13,7 @@ namespace BettingApp
         public string Password { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public string  PhoneNumber { get; private set; }
+        public string PhoneNumber { get; private set; }
         public string Email { get; private set; }
         public string Address { get; private set; }
         // There will be a method that will determine based on UserWallet and the Balance or Depostin - he has what level of Account this is, will see how this will be implemented
@@ -30,7 +30,7 @@ namespace BettingApp
             PhoneNumber = phoneNumber;
             Email = email;
             Address = address;
-            UserWallet = new Ewallet(this);
+            UserWallet =  new Ewallet(this);
         }
 
         // We will have two constructors, one with Random Generated values the other with manual. This helps in Testing
