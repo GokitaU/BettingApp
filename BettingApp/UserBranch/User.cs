@@ -60,14 +60,5 @@ namespace BettingApp
 
             return sb.ToString();
         }
-
-        // Method to determine the type of the Account
-
-
-        // Here all the method will go. User will create a E Wallet basically,
-        // 1st) Connecting Credit Card to Ewaller
-        // 2nd) Deposit Money from Credit card to E Wallet mayne another method or in the same one for WithDrawall
-        // WILL SEE, DONT KNOW WHERE TO PUT IT YET
-
     }
 }
