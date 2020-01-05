@@ -13,12 +13,30 @@ namespace BettingApp
         public FootballTeam AwayTeam { get; set; }
         public DateTime MatchDate { get; set; }
 
-        public Outcome MatchResult { get; set; }
+        public Outcome? MatchResult { get; set; }
 
-        public double HomeWinOdd { get; set; }// these properties can either have a readonly calculated formula or a seter, or bothh?
+        private double homeWinOdd;
+        public double HomeWinOdd { 
+            get
+            {
+                return homeWinOdd;
+            }
+            set
+            {   //A very³ simple formula, for now...
+                 homeWinOdd = 1 + (100 / (HomeTeam.HomeValue / AwayTeam.AwayValue)) / 100;
+            }
+        }// these properties can either have a readonly calculated formula or a seter, or bothh?
         public double AwayWinOdd { get; set; }
         public double DrawOdd { get; set; }
         //public int ID { get; set; }
+
+        public FootballMatch(FootballTeam homeTeam, FootballTeam awayTeam, DateTime matchDate)
+        {
+            HomeTeam = homeTeam;
+            AwayTeam = awayTeam;
+            MatchDate = matchDate;
+            MatchResult = null;
+        }
 
         
     }

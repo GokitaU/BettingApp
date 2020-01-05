@@ -19,6 +19,7 @@ namespace BettingApp
         // There will be a method that will determine based on UserWallet and the Balance or Depostin - he has what level of Account this is, will see how this will be implemented
         //public string TypeOfAccount { get; private set; }
         public Ewallet UserWallet { get; private set; }
+        public List<Bet> BetsPlaced { get; set; }
 
         // We will have two constructors, one with Random Generated values the other with manual. This helps in Testing
         public User(string userName, string password, string firstName, string lastName, string phoneNumber, string email, string address)
@@ -31,6 +32,7 @@ namespace BettingApp
             Email = email;
             Address = address;
             UserWallet =  new Ewallet(this);
+            BetsPlaced = new List<Bet>();
         }
 
         // We will have two constructors, one with Random Generated values the other with manual. This helps in Testing

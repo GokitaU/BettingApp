@@ -25,15 +25,8 @@ namespace BettingApp
             DBContext.Users.Add(new User("bobleman", "Password", "Bob", "Papadopoulos", "6944367283", "Bob@bob.bob", "Bob B"));
 
         }
-        public static IAccount Login()
+        public static IAccount Login( string userName, string password)
         {
-
-            Console.Write("Please type your username: ");
-            string userName = Console.ReadLine();
-
-            Console.WriteLine("Please type your password: ");
-            string password = Console.ReadLine();
-
             foreach (var admin in DBContext.Admins)
             {
                 if (admin.UserName.Equals(userName, StringComparison.OrdinalIgnoreCase))

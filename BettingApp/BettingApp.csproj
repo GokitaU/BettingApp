@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Admin\Admin.cs" />
     <Compile Include="BetBranch\Bet.cs" />
+    <Compile Include="GamesBranch\League.cs" />
     <Compile Include="UserBranch\Interfaces\ICreditCard.cs" />
     <Compile Include="SupportClasses\CustomException.cs" />
     <Compile Include="SupportClasses\Repeater.cs" />

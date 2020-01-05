@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BettingApp.GamesBranch;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,18 +9,22 @@ namespace BettingApp
 {
     class FootballTeam
     {
-        public FootballTeam(string name, double homeValue, double awayValue, double additionalValue)
+        public FootballTeam(string name, double homeValue, double awayValue,  League leagueRelated)
         {
+            
             Name = name;
             HomeValue = homeValue;
             AwayValue = awayValue;
-            AdditionalValue = additionalValue;
+            //AdditionalValue = additionalValue;
+            LeagueRelated = leagueRelated;
+            //DBContext.FootballTeams.Add(this);
         }
 
         public string Name { get; set; }
         public double HomeValue { get; set; }
         public double AwayValue { get; set; }
-        public double AdditionalValue { get; set; }
-       // public int ID { get; set; }
+        //public double AdditionalValue { get; set; }
+        public League LeagueRelated { get; set; }
+        // public int ID { get; set; }
     }
 }
