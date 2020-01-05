@@ -25,7 +25,7 @@ namespace BettingApp
             // never used a getter in this way, need testing
             get
             {
-                return CreditCard_Balance;
+                return creditcard_balance;
             }
             set 
             {

@@ -46,6 +46,7 @@ namespace BettingApp
             Email = $"{FirstName}.{LastName}@gmail.com";
             Address = RandomGenerator.RND_Adress(random);
             UserWallet = new Ewallet(this);
+            BetsPlaced = new List<Bet>();
         }
 
         // String Override to Print the User Details

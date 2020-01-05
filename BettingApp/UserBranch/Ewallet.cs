@@ -16,10 +16,9 @@ namespace BettingApp
         private double e_walletbalance;
         private double E_WalletBalance
         {
-            // never used a getter in this way, need testing
             get
             {
-                return E_WalletBalance;
+                return e_walletbalance;
             }
             set 
             {
@@ -48,9 +47,7 @@ namespace BettingApp
 
             // Checks to ensure that the user will do what he wants in a way the program can handle it
             if(user.UserWallet.E_WalletBalance >= transactionValue)
-            {
-                user.UserWallet.E_WalletBalance = user.UserWallet.E_WalletBalance - transactionValue;
-                
+            {                
                 // user will Pick the Card he want to use if there is none, he must add one
                 if (user.UserWallet.CreditCards.Count == 0)
                 {
@@ -72,6 +69,8 @@ namespace BettingApp
 
                 // Money added to the card that the user picked, later we can add here a property where user will choose if he want to use an existing card, or add a new one.
                 user.UserWallet.CreditCards[numberChoice].CreditCard_Transaction(user.UserWallet.CreditCards[numberChoice], transactionValue);
+                // If everything was ok, the Wallet will subtract the ammount of money user deposited to his Credit Card
+                user.UserWallet.E_WalletBalance = user.UserWallet.E_WalletBalance - transactionValue;
             }
             else if (user.UserWallet.E_WalletBalance <= transactionValue)
             {
@@ -83,9 +82,7 @@ namespace BettingApp
                     Console.WriteLine($"Would you like to Withrdaw {user.UserWallet.E_WalletBalance} euros? Y/N");
                     switch(choice.ToUpper())
                     {
-                        case "Y":
-                            user.UserWallet.E_WalletBalance = user.UserWallet.E_WalletBalance - user.UserWallet.E_WalletBalance;
-                            
+                        case "Y":                            
                             // user will Pick the Card he want to use if there is none, he must add one
                             if (user.UserWallet.CreditCards.Count == 0)
                             {
@@ -107,6 +104,8 @@ namespace BettingApp
 
                             // Money added to the card that the user picked, later we can add here a property where user will choose if he want to use an existing card, or add a new one.
                             user.UserWallet.CreditCards[numberChoice].CreditCard_Transaction(user.UserWallet.CreditCards[numberChoice], transactionValue);
+                            // If everything was ok, the Wallet will subtract the ammount of money user deposited to his Credit Card
+                            user.UserWallet.E_WalletBalance = user.UserWallet.E_WalletBalance - transactionValue;       
                             break;
 
                         default:

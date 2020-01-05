@@ -52,34 +52,38 @@ namespace BettingApp
             return null;
         }
 
+        // Changed a little bit the text that will be printed
         public static string AdminMenu(Admin admin)
         {
-            Console.WriteLine("Press 1 to print curently registered leagues");
-            Console.WriteLine("Press 2 to print curently registered teams");
-            Console.WriteLine("Press 3 to print curently active for betting football matches");
-            Console.WriteLine("Press 4 to register a new football match");
-            Console.WriteLine("Press 5 to register a new football team");
-            Console.WriteLine("Press 6 to register a new football league");
-            Console.WriteLine("Press any other key to exit");
-
+            Console.WriteLine("What would you like to do:");
+            Console.WriteLine("1) Print curently registered leagues");
+            Console.WriteLine("2) Print curently registered teams");
+            Console.WriteLine("3) Print curently active for betting football matches");
+            Console.WriteLine("4) Register a new football match");
+            Console.WriteLine("5) Register a new football team");
+            Console.WriteLine("6) Register a new football league");
+            Console.WriteLine("7) Exit");
 
             string userInput = Console.ReadLine();
             return userInput;
         }
 
+        // Changed a little bit the text that will be printed
         public static string UserMenu(User user)
         {
             Console.WriteLine(user);
-            Console.WriteLine("Press 1 to edit personal information");
-            Console.WriteLine("Press 2 to manage Ewallet");
-            Console.WriteLine("Press 3 to place a bet");
-            Console.WriteLine("Press 4 to view all active bets");
+            Console.WriteLine("What would you like to do:");
+            Console.WriteLine("1) Edit personal information");
+            Console.WriteLine("2) Manage Ewallet");
+            Console.WriteLine("3) Place a bet");
+            Console.WriteLine("4) View all active bets");
 
             string userInput = Console.ReadLine();
 
             return userInput;
         }
 
+        // An UI for creating a Credit Card, later there will be checks
         public static CreditCard CreateCreditCard(User user)
         {
             Console.WriteLine("Please enter your Credit Card Details:");
@@ -93,5 +97,29 @@ namespace BettingApp
             CreditCard creditCard = new CreditCard(cardNumber, nameOnCard, experationDate, user);
             return creditCard;            
         }
+
+        // An UI for creating a User, later there will be checks
+        public static User CreateUser() 
+        {
+            Console.WriteLine("Enter your Username");
+            string userName = Console.ReadLine();
+            Console.WriteLine("Enter your password");
+            string password = Console.ReadLine();
+            Console.WriteLine("Enter your First Name");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter your Last Name");
+            string lastName = Console.ReadLine();
+            Console.WriteLine("Enter your phone number");
+            string phoneNumber = Console.ReadLine();
+            Console.WriteLine("Enter your email address");
+            string email = Console.ReadLine();
+            Console.WriteLine("Enter your address");
+            string address = Console.ReadLine();           
+
+            User user = new User(userName,password,firstName,lastName,phoneNumber,email,address);
+
+            return user;
+        }
+
     }
 }
