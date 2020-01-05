@@ -48,7 +48,6 @@
     <Compile Include="GamesBranch\League.cs" />
     <Compile Include="UserBranch\Interfaces\ICreditCard.cs" />
     <Compile Include="SupportClasses\CustomException.cs" />
-    <Compile Include="SupportClasses\Repeater.cs" />
     <Compile Include="SupportClasses\RandomGenerator.cs" />
     <Compile Include="UserBranch\CreditCard.cs" />
     <Compile Include="SupportClasses\DBContext.cs" />

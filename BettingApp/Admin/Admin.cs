@@ -8,8 +8,7 @@ namespace BettingApp
 {
     class Admin : IAccount
     {
-
-
+        private static Admin AdminInstance;
         //public int ID { get; set; }
 
         public string UserName { get; set; }
@@ -17,8 +16,16 @@ namespace BettingApp
 
         public Admin( string userName, string password)
         {
-            UserName = userName;
-            Password = password;
+            if (AdminInstance == null)
+            {
+                UserName = userName;
+                Password = password;
+                AdminInstance = this;
+            }
+            else
+            {
+                throw new Exception("Admin instance is already present in the system");
+            }
         }
 
 
