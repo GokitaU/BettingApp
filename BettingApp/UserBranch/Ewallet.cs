@@ -54,15 +54,7 @@ namespace BettingApp
                 // user will Pick the Card he want to use if there is none, he must add one
                 if (user.UserWallet.CreditCards.Count == 0)
                 {
-                    Console.WriteLine("Please enter your Credit Card Details:");
-                    Console.WriteLine("Enter your Credit Card Number:");
-                    string cardNumber = Console.ReadLine();
-                    Console.WriteLine("Enter your Credit Card Name:");
-                    string nameOnCard = Console.ReadLine();
-                    Console.WriteLine("Enter your Credit Card Experation Date: (dd/mm/yyyy");
-                    DateTime experationDate = DateTime.Parse(Console.ReadLine());
-                
-                    CreditCard creditCard = new CreditCard(cardNumber, nameOnCard, experationDate, user);
+                    CreditCard creditCard = UserInterface.CreateCreditCard(user);
                     user.UserWallet.CreditCards.Add(creditCard);
                     Console.WriteLine("Credit Card successfully added");
                 }
@@ -97,16 +89,7 @@ namespace BettingApp
                             // user will Pick the Card he want to use if there is none, he must add one
                             if (user.UserWallet.CreditCards.Count == 0)
                             {
-                                Console.WriteLine("Please enter your Credit Card Details:");
-                                Console.WriteLine("Enter your Credit Card Number:");
-                                string cardNumber = Console.ReadLine();
-                                Console.WriteLine("Enter your Credit Card Name:");
-                                string nameOnCard = Console.ReadLine();
-                                Console.WriteLine("Enter your Credit Card Experation Date: (dd/mm/yyyy");
-                                DateTime experationDate = DateTime.Parse(Console.ReadLine());
-
-                
-                                CreditCard creditCard = new CreditCard(cardNumber, nameOnCard, experationDate, user);
+                                CreditCard creditCard = UserInterface.CreateCreditCard(user);
                                 user.UserWallet.CreditCards.Add(creditCard);
                                 Console.WriteLine("Credit Card successfully added");         
                             }
@@ -147,16 +130,7 @@ namespace BettingApp
             // user will Pick the Card he want to use if there is none, he must add one
             if (user.UserWallet.CreditCards.Count == 0)
             {
-                Console.WriteLine("Please enter your Credit Card Details:");
-                Console.WriteLine("Enter your Credit Card Number:");
-                string cardNumber = Console.ReadLine();
-                Console.WriteLine("Enter your Credit Card Name:");
-                string nameOnCard = Console.ReadLine();
-                Console.WriteLine("Enter your Credit Card Experation Date: (dd/mm/yyyy");
-                DateTime experationDate = DateTime.Parse(Console.ReadLine());
-
-                
-                 CreditCard creditCard = new CreditCard(cardNumber, nameOnCard, experationDate, user);
+                 CreditCard creditCard = UserInterface.CreateCreditCard(user);
                  user.UserWallet.CreditCards.Add(creditCard);
                  Console.WriteLine("Credit Card successfully added");           
             }

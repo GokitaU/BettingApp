@@ -25,7 +25,7 @@ namespace BettingApp
             {   //A very³ simple formula, for now...
                  homeWinOdd = 1 + (100 / (HomeTeam.HomeValue / AwayTeam.AwayValue)) / 100;
             }
-        }// these properties can either have a readonly calculated formula or a seter, or bothh?
+        }// these properties can either have a readonly calculated formula or a seter, or bothh? ---> Daniel says make both (xaxa)
         public double AwayWinOdd { get; set; }
         public double DrawOdd { get; set; }
         //public int ID { get; set; }

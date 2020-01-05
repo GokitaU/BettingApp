@@ -79,5 +79,19 @@ namespace BettingApp
 
             return userInput;
         }
+
+        public static CreditCard CreateCreditCard(User user)
+        {
+            Console.WriteLine("Please enter your Credit Card Details:");
+            Console.WriteLine("Enter your Credit Card Number:");
+            string cardNumber = Console.ReadLine();
+            Console.WriteLine("Enter your Credit Card Name:");
+            string nameOnCard = Console.ReadLine();
+            Console.WriteLine("Enter your Credit Card Experation Date: (dd/mm/yyyy");
+            DateTime experationDate = DateTime.Parse(Console.ReadLine());
+                
+            CreditCard creditCard = new CreditCard(cardNumber, nameOnCard, experationDate, user);
+            return creditCard;            
+        }
     }
 }
